@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 
-import { OptionClickHandler } from "../OptionsMenu/interfaces";
+import { OptionClickHandler } from "../../OptionsMenu/interfaces";
 
 export interface ISurfaceCardProps extends HTMLAttributes<HTMLDivElement> {
   title: string;

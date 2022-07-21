@@ -1,5 +1,5 @@
 import React from "react";
-import { OptionsMenu } from "../OptionsMenu";
+import { OptionsMenu } from "../../OptionsMenu";
 
 import { ISurfaceCardProps } from "./interfaces";
 import { ChildrenContainer, Container, Header, Title } from "./styles";

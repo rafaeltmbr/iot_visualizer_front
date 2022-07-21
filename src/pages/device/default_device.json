@@ -1,0 +1,28 @@
+{
+  "id": "57d792c9-2a5b-44d5-8873-1964891e3de9",
+  "secret": "soday9bqjpte1v0f",
+  "updated_at": "2022-07-21T13:45:38.688920",
+  "description": "Controller that i use at home.",
+  "name": "Home Controller",
+  "created_at": "2022-07-21T13:45:38.688920",
+  "attributes": [
+    {
+      "name": "Temperature",
+      "device_id": "57d792c9-2a5b-44d5-8873-1964891e3de9",
+      "formatting": "{\"suffix\": \"°C\"}",
+      "updated_at": "2022-07-21T13:46:54.518704",
+      "id": "9e8425a7-5929-443b-9050-919e924d573f",
+      "type": "text",
+      "created_at": "2022-07-21T13:46:54.518704",
+      "readings": [
+        {
+          "created_at": "2022-07-21T13:48:40.464523",
+          "id": "7c71c145-1f00-4460-a3c8-6d67055b73ea",
+          "value": "10",
+          "attribute_id": "9e8425a7-5929-443b-9050-919e924d573f",
+          "updated_at": "2022-07-21T13:48:40.464523"
+        }
+      ]
+    }
+  ]
+}

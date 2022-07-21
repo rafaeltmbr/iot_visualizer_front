@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  width: 100vw;
   height: ${(props) => props.theme.dimensions.headerHeight};
   background-color: ${(props) => props.theme.colors.header};
   color: ${(props) => props.theme.colors.onHeader};
@@ -11,8 +12,10 @@ export const ContentWrapper = styled.div`
   height: 100%;
   max-width: ${(props) => props.theme.dimensions.headerMaxWidth};
   margin: 0 auto;
+
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
 export const PageLogo = styled.div`
@@ -32,16 +35,18 @@ export const PageLogo = styled.div`
 `;
 
 export const PageTitle = styled.div`
-  flex: 1;
   font-size: 1.125rem;
   font-weight: 500;
   text-align: center;
+  padding: 0 0.25rem 0 1rem;
+  flex: 1;
+
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 
   @media (max-width: ${(props) => props.theme.breakingsPoints.smallMobile}px) {
-    opacity: 0;
+    display: none;
   }
 `;
 
