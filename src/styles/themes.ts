@@ -5,8 +5,15 @@ const breakingsPoints = {
   largeDesktop: 1366,
 };
 
+const dimensions = {
+  headerHeight: "3rem",
+  headerMaxWidth: "85rem", // 1360px
+  pageMaxWidth: "62.5rem", // 1000px
+};
+
 const light = {
   name: "light",
+  dimensions,
   breakingsPoints,
   colors: {
     primary: "#0083E2",
@@ -19,6 +26,7 @@ const light = {
     surface: "#FBFBFB",
     onSurface: "#666666",
     onSurfaceHighlight: "#333333",
+    onSurfaceHover: "#F1F1F1",
     surfaceBorder: "#E5E5E5",
     onPrimary: "#FFFFFF",
     graphGrid: "#F0F0F0",
