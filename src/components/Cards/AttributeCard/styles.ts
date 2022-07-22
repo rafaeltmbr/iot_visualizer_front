@@ -5,9 +5,3 @@ export const Content = styled.div`
     display: flex;
   }
 `;
-
-export const GraphContainer = styled.div`
-  &[data-show="false"] {
-    display: none;
-  }
-`;

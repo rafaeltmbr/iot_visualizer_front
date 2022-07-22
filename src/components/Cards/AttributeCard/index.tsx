@@ -1,12 +1,13 @@
 import React from "react";
 
 import { IAttributeCardProps } from "./interfaces";
-import { Content, GraphContainer } from "./styles";
+import { Content } from "./styles";
 import { NoReadings } from "./components/NoReadings";
 import { CardReadings } from "./components/CardReadings";
 import { SurfaceCard } from "../SurfaceCard";
 import { ContentContext } from "../../../content/locale";
 import { getLocaleContent } from "../../../utils/getLocaleContent";
+import { CardGraph } from "./components/CardGraph";
 
 export const AttributeCard: React.FC<IAttributeCardProps> = ({
   attribute,
@@ -21,6 +22,9 @@ export const AttributeCard: React.FC<IAttributeCardProps> = ({
     console.log(option, index);
   };
 
+  const showGraph =
+    attribute.metadata.layout === "long" && attribute.type !== "text";
+
   return (
     <SurfaceCard
       {...rest}
@@ -34,13 +38,7 @@ export const AttributeCard: React.FC<IAttributeCardProps> = ({
           data-type={attribute.type}
         >
           <CardReadings attribute={attribute} />
-          <GraphContainer
-            data-show={
-              attribute.metadata.layout === "long" && attribute.type !== "text"
-            }
-          >
-            Graph
-          </GraphContainer>
+          {showGraph && <CardGraph readings={attribute.readings} />}
         </Content>
       ) : (
         <NoReadings />
