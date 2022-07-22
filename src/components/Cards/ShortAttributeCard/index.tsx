@@ -19,6 +19,7 @@ import { formatReading } from "../../../utils/formatReading";
 
 export const ShortAttributeCard: React.FC<IAttributeCardProps> = ({
   attribute,
+  ...rest
 }) => {
   const options = [
     getLocaleContent("editOption"),
@@ -36,16 +37,18 @@ export const ShortAttributeCard: React.FC<IAttributeCardProps> = ({
 
   return (
     <SurfaceCard
+      {...rest}
       title={attribute.name}
       options={options}
       onOptionClick={handleOptionClick}
+      className={attribute.metadata.layout}
     >
       {lastReading ? (
         <Content>
           <Reading>
             {formatReading(
               attribute.type,
-              attribute.formatting,
+              attribute.metadata.formatting,
               lastReading.value
             )}
           </Reading>

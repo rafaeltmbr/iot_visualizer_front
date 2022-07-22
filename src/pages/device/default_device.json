@@ -9,10 +9,14 @@
     {
       "name": "Bath temperature",
       "device_id": "57d792c9-2a5b-44d5-8873-1964891e3de9",
-      "formatting": {
-        "number": {
-          "preffix": "",
-          "suffix": "°C"
+      "metadata": {
+        "layout": "long",
+        "index": 1,
+        "formatting": {
+          "number": {
+            "preffix": "",
+            "suffix": "°C"
+          }
         }
       },
       "updated_at": "2022-07-21T13:46:54.518704",
@@ -46,10 +50,14 @@
     {
       "name": "Garage door is",
       "device_id": "57d792c9-2a5b-44d5-8873-1964891e3de9",
-      "formatting": {
-        "boolean": {
-          "true_text": "Open",
-          "false_text": "Closed"
+      "metadata": {
+        "layout": "short",
+        "index": 2,
+        "formatting": {
+          "boolean": {
+            "true_text": "Open",
+            "false_text": "Closed"
+          }
         }
       },
       "updated_at": "2022-07-21T13:46:54.518704",
@@ -81,11 +89,15 @@
       ]
     },
     {
-      "name": "Gate closed at the interval you usually se it closing god damnit! hahaha i'm so funny",
+      "name": "That status message you can't loose",
       "device_id": "57d792c9-2a5b-44d5-8873-1964891e3de9",
-      "formatting": {
-        "text": {
-          "transform": "none"
+      "metadata": {
+        "layout": "short",
+        "index": 3,
+        "formatting": {
+          "text": {
+            "transform": "none"
+          }
         }
       },
       "updated_at": "2022-07-21T13:46:54.518704",
@@ -110,7 +122,7 @@
         {
           "created_at": "2022-10-21T12:00:40.464523",
           "id": "7c71c145-1f00-4460-a3c8-6d67055b73ef",
-          "value": "12:00 a.M. All right babe, lets go ROCK some parties",
+          "value": "All right babe, let's ROCK some parties across the town",
           "attribute_id": "9e8425a7-5929-443b-9050-919e924d573f",
           "updated_at": "2022-10-21T12:00:40.464523"
         }
@@ -119,9 +131,13 @@
     {
       "name": "Dog wake up time",
       "device_id": "57d792c9-2a5b-44d5-8873-1964891e3de9",
-      "formatting": {
-        "text": {
-          "transform": "none"
+      "metadata": {
+        "layout": "long",
+        "index": 4,
+        "formatting": {
+          "text": {
+            "transform": "none"
+          }
         }
       },
       "updated_at": "2022-07-21T13:46:54.518704",

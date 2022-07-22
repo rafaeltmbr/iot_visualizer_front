@@ -10,11 +10,12 @@ export const SurfaceCard: React.FC<ISurfaceCardProps> = ({
   children,
   options,
   onOptionClick,
+  ...rest
 }) => {
   const showOptions = !!(options && options.length && onOptionClick);
 
   return (
-    <Container>
+    <Container {...rest}>
       <Header>
         <Title data-highlight={!!titleHighlight} data-pad-right={!showOptions}>
           {title}

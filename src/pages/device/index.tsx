@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import default_device from "./default_device.json";
-import { Container } from "./styles";
+import { AttributesContainer, Container } from "./styles";
 import { usePageConfig } from "../../hooks/pageConfig";
 import { IDevice } from "../../interfaces/device";
 import { DeviceHeaderCard } from "../../components/Cards/DeviceHeaderCard";
@@ -26,9 +26,11 @@ export const Device: React.FC = () => {
   return (
     <Container>
       <DeviceHeaderCard device={device} />
-      {device.attributes.map((attribute) => (
-        <ShortAttributeCard key={attribute.id} attribute={attribute} />
-      ))}
+      <AttributesContainer>
+        {device.attributes.map((attribute) => (
+          <ShortAttributeCard key={attribute.id} attribute={attribute} />
+        ))}
+      </AttributesContainer>
     </Container>
   );
 };
