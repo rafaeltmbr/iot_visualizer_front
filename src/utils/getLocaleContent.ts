@@ -1,16 +1,5 @@
-import { getClientLanguage } from "./getClientLanguage";
-import {
-  ContentContext,
-  localeContent,
-  supportedLaguages,
-  SupportedLanguage,
-} from "../content/locale";
+import { getCurrentLocale } from "./getCurrentLocale";
+import { ContentContext, localeContent } from "../content/locale";
 
-export const getLocaleContent = (context: ContentContext) => {
-  const language = getClientLanguage(
-    supportedLaguages,
-    supportedLaguages[0]
-  ) as SupportedLanguage;
-
-  return localeContent[context][language];
-};
+export const getLocaleContent = (context: ContentContext) =>
+  localeContent[context][getCurrentLocale()];

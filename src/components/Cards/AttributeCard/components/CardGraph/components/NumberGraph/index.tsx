@@ -9,6 +9,8 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { useTheme } from "styled-components";
+import { formatNumberGraphData } from "../../../../../../../utils/formatNumberGraphData";
+import { GraphTooltip } from "../../../GraphTooltip";
 
 import { INumberGraphs } from "./interfaces";
 import { Container } from "./styles";
@@ -16,30 +18,7 @@ import { Container } from "./styles";
 export const NumberGraph: React.FC<INumberGraphs> = ({ attribute }) => {
   const theme = useTheme();
 
-  const data = useMemo(() => {
-    return [
-      { name: "07:21:20 AM", value: "15" },
-      { name: "08:21:20 AM", value: "17" },
-      { name: "09:21:20 AM", value: "18" },
-      { name: "10:21:20 AM", value: "25" },
-      { name: "11:21:20 AM", value: "39" },
-      { name: "07:21:20 AM", value: "15" },
-      { name: "08:21:20 AM", value: "17" },
-      { name: "09:21:20 AM", value: "18" },
-      { name: "10:21:20 AM", value: "25" },
-      { name: "11:21:20 AM", value: "39" },
-      { name: "07:21:20 AM", value: "15" },
-      { name: "08:21:20 AM", value: "17" },
-      { name: "09:21:20 AM", value: "18" },
-      { name: "10:21:20 AM", value: "25" },
-      { name: "11:21:20 AM", value: "39" },
-      { name: "07:21:20 AM", value: "15" },
-      { name: "08:21:20 AM", value: "17" },
-      { name: "09:21:20 AM", value: "18" },
-      { name: "10:21:20 AM", value: "25" },
-      { name: "11:21:20 AM", value: "39" },
-    ];
-  }, []);
+  const data = useMemo(() => formatNumberGraphData(attribute), [attribute]);
 
   return (
     <Container>
@@ -50,26 +29,31 @@ export const NumberGraph: React.FC<INumberGraphs> = ({ attribute }) => {
         >
           <Line
             type="monotone"
-            dataKey="value"
+            dataKey="y"
             stroke={theme.colors.primary}
             strokeWidth={2}
             dot={false}
           />
           <YAxis
-            dataKey="value"
+            dataKey="y"
             axisLine={false}
             tickLine={{ display: "none" }}
             tick={{ style: { fontSize: "0.8125rem" } }}
+            domain={["auto", "auto"]}
           />
           <XAxis
-            dataKey="name"
+            dataKey="x"
             axisLine={false}
             tickMargin={8}
             tickLine={{ display: "none" }}
             tick={{ style: { fontSize: "0.8125rem" } }}
           />
           <CartesianGrid stroke={theme.colors.graphGrid} />
-          <Tooltip />
+          <Tooltip
+            content={(...args) => (
+              <GraphTooltip data={args[0]?.payload?.[0]?.payload} />
+            )}
+          />
         </LineChart>
       </ResponsiveContainer>
     </Container>
