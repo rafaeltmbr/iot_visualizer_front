@@ -1,10 +1,10 @@
-export type localeContent = Record<ContentContext, LanguageContent>;
+export type LocaleContent = Record<ContentContext, LanguageContent>;
 type LanguageContent = Record<SupportedLanguage, string>;
 
-export const supportedLaguages = <const>["pt", "en"];
+export const supportedLaguages = ["pt", "en"] as const;
 export type SupportedLanguage = typeof supportedLaguages[number];
 
-export const contentContext = <const>[
+export const contentContext = [
   "lastReadingOn",
   "devicePageTitle",
   "editOption",
@@ -13,10 +13,10 @@ export const contentContext = <const>[
   "readOn",
   "noReadings",
   "newAttribute",
-];
+] as const;
 export type ContentContext = typeof contentContext[number];
 
-export const localeContent: localeContent = {
+export const localeContent: LocaleContent = {
   lastReadingOn: {
     en: "Last reading on",
     pt: "Última leitura em",

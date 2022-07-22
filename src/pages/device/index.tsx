@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 
 import default_device from "./default_device.json";
 import { AttributesContainer, Container } from "./styles";
@@ -7,13 +6,12 @@ import { usePageConfig } from "../../hooks/pageConfig";
 import { IDevice } from "../../interfaces/device";
 import { DeviceHeaderCard } from "../../components/Cards/DeviceHeaderCard";
 import { getLocaleContent } from "../../utils/getLocaleContent";
-import { ShortAttributeCard } from "../../components/Cards/ShortAttributeCard";
+import { AttributeCard } from "../../components/Cards/AttributeCard";
 import { NewButton } from "../../components/Buttons/NewButton";
 
 export const Device: React.FC = () => {
-  const [device, setDevice] = useState<IDevice>(default_device as any);
+  const [device] = useState<IDevice>(default_device as any);
 
-  const { device_id } = useParams();
   const { setConfig } = usePageConfig();
 
   useEffect(() => {
@@ -22,7 +20,7 @@ export const Device: React.FC = () => {
       : "";
 
     setConfig((cfg) => ({ ...cfg, headerTitle }));
-  }, [device]);
+  }, [device, setConfig]);
 
   return (
     <Container>
@@ -32,7 +30,11 @@ export const Device: React.FC = () => {
       </NewButton>
       <AttributesContainer>
         {device.attributes.map((attribute) => (
-          <ShortAttributeCard key={attribute.id} attribute={attribute} />
+          <AttributeCard
+            key={attribute.id}
+            attribute={attribute}
+            className={attribute.metadata.layout}
+          />
         ))}
       </AttributesContainer>
     </Container>
