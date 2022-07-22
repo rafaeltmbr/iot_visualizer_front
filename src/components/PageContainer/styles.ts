@@ -10,7 +10,12 @@ export const Container = styled.div`
 export const ChildrenContaienr = styled.div`
   height: 100%;
   width: 100%;
+  overflow: auto;
+`;
+
+export const ChildrenWrapper = styled.div`
+  height: 100%;
+  width: 100%;
   max-width: ${(props) => props.theme.dimensions.pageMaxWidth};
   margin: 0 auto;
-  overflow: auto;
 `;

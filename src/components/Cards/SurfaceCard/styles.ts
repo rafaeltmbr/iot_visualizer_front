@@ -42,5 +42,5 @@ export const Title = styled.div`
 `;
 
 export const ChildrenContainer = styled.div`
-  padding: 0.5rem var(--surface-card-horizontal-padding) 0;
+  padding: 0 var(--surface-card-horizontal-padding);
 `;

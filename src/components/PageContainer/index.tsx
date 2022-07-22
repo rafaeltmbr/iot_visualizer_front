@@ -6,7 +6,7 @@ import {
   IPageContainerProps,
   IPageContextValue,
 } from "./interfaces";
-import { ChildrenContaienr, Container } from "./styles";
+import { ChildrenContaienr, ChildrenWrapper, Container } from "./styles";
 import { PageHeader } from "../PageHeader";
 import { GlobalStyles } from "../../styles/GlobalStyles";
 
@@ -19,7 +19,9 @@ export const PageContainer: React.FC<IPageContainerProps> = ({ children }) => {
     <Ctx.Provider value={{ config, setConfig }}>
       <Container>
         <PageHeader title={config.headerTitle} />
-        <ChildrenContaienr>{children}</ChildrenContaienr>
+        <ChildrenContaienr>
+          <ChildrenWrapper>{children}</ChildrenWrapper>
+        </ChildrenContaienr>
         <GlobalStyles />
       </Container>
     </Ctx.Provider>

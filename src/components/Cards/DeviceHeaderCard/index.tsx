@@ -1,21 +1,19 @@
 import React, { useMemo } from "react";
-import { getLocaleContent } from "../../../utils/getLocaleContent";
-import { SurfaceCard } from "../SurfaceCard";
 
 import { IDeviceHeaderCardProps } from "./interfaces";
 import { Content, Description, LastReading, LastReadingDate } from "./styles";
+import { getLocaleContent } from "../../../utils/getLocaleContent";
+import { SurfaceCard } from "../SurfaceCard";
+import { getRecentlyReadAttributes } from "../../../utils/getRecentlyReadAttributes";
 
 export const DeviceHeaderCard: React.FC<IDeviceHeaderCardProps> = ({
   device,
 }) => {
   const lastReading = useMemo(() => {
-    const readings = device.attributes
-      .map((e) => e.readings)
-      .flatMap((e) => e.map((e) => e.created_at))
-      .sort();
+    const readings = getRecentlyReadAttributes(device.attributes)[0]?.readings;
 
-    return readings[0] ? new Date(readings[0]).toLocaleString() : "";
-  }, [device]);
+    return readings[0] ? new Date(readings[0].updated_at).toLocaleString() : "";
+  }, [device.attributes]);
 
   return (
     <SurfaceCard title={device.name} titleHighlight>

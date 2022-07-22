@@ -7,12 +7,17 @@
   "created_at": "2022-07-21T13:45:38.688920",
   "attributes": [
     {
-      "name": "Temperature",
+      "name": "Bath temperature",
       "device_id": "57d792c9-2a5b-44d5-8873-1964891e3de9",
-      "formatting": "{\"suffix\": \"°C\"}",
+      "formatting": {
+        "number": {
+          "preffix": "",
+          "suffix": "°C"
+        }
+      },
       "updated_at": "2022-07-21T13:46:54.518704",
       "id": "9e8425a7-5929-443b-9050-919e924d573f",
-      "type": "text",
+      "type": "number",
       "created_at": "2022-07-21T13:46:54.518704",
       "readings": [
         {
@@ -21,8 +26,109 @@
           "value": "10",
           "attribute_id": "9e8425a7-5929-443b-9050-919e924d573f",
           "updated_at": "2022-07-21T13:48:40.464523"
+        },
+        {
+          "created_at": "2022-07-21T25:48:40.464523",
+          "id": "7c71c145-1f00-4460-a3c8-6d67055b73eb",
+          "value": "12",
+          "attribute_id": "9e8425a7-5929-443b-9050-919e924d573f",
+          "updated_at": "2022-07-21T25:48:40.464523"
+        },
+        {
+          "created_at": "2022-08-21T13:48:40.464523",
+          "id": "7c71c145-1f00-4460-a3c8-6d67055b73ec",
+          "value": "15",
+          "attribute_id": "9e8425a7-5929-443b-9050-919e924d573f",
+          "updated_at": "2022-08-21T13:48:40.464523"
         }
       ]
+    },
+    {
+      "name": "Garage door is",
+      "device_id": "57d792c9-2a5b-44d5-8873-1964891e3de9",
+      "formatting": {
+        "boolean": {
+          "true_text": "Open",
+          "false_text": "Closed"
+        }
+      },
+      "updated_at": "2022-07-21T13:46:54.518704",
+      "id": "9e8425a7-5929-443b-9050-919e924d573a",
+      "type": "boolean",
+      "created_at": "2022-07-21T13:46:54.518704",
+      "readings": [
+        {
+          "created_at": "2022-01-21T13:48:40.464523",
+          "id": "7c71c145-1f00-4460-a3c8-6d67055b73ed",
+          "value": "true",
+          "attribute_id": "9e8425a7-5929-443b-9050-919e924d573f",
+          "updated_at": "2022-07-21T13:48:40.464523"
+        },
+        {
+          "created_at": "2022-09-21T23:48:40.464523",
+          "id": "7c71c145-1f00-4460-a3c8-6d67055b73ee",
+          "value": "false",
+          "attribute_id": "9e8425a7-5929-443b-9050-919e924d573f",
+          "updated_at": "2022-09-21T23:48:40.464523"
+        },
+        {
+          "created_at": "2022-08-21T13:48:40.464523",
+          "id": "7c71c145-1f00-4460-a3c8-6d67055b73ef",
+          "value": "false",
+          "attribute_id": "9e8425a7-5929-443b-9050-919e924d573f",
+          "updated_at": "2022-08-21T13:48:40.464523"
+        }
+      ]
+    },
+    {
+      "name": "Gate closed at the interval you usually se it closing god damnit! hahaha i'm so funny",
+      "device_id": "57d792c9-2a5b-44d5-8873-1964891e3de9",
+      "formatting": {
+        "text": {
+          "transform": "none"
+        }
+      },
+      "updated_at": "2022-07-21T13:46:54.518704",
+      "id": "9e8425a7-5929-443b-9050-919e924d5744",
+      "type": "text",
+      "created_at": "2022-07-21T13:46:54.518704",
+      "readings": [
+        {
+          "created_at": "2022-01-21T11:45:40.464523",
+          "id": "7c71c145-1f00-4460-a3c8-6d67055b73ed",
+          "value": "11:45 AM",
+          "attribute_id": "9e8425a7-5929-443b-9050-919e924d573f",
+          "updated_at": "2022-01-21T11:45:40.464523"
+        },
+        {
+          "created_at": "2022-09-21T14:30:40.464523",
+          "id": "7c71c145-1f00-4460-a3c8-6d67055b73ee",
+          "value": "2:30 PM",
+          "attribute_id": "9e8425a7-5929-443b-9050-919e924d573f",
+          "updated_at": "2022-09-21T14:30:40.464523"
+        },
+        {
+          "created_at": "2022-10-21T12:00:40.464523",
+          "id": "7c71c145-1f00-4460-a3c8-6d67055b73ef",
+          "value": "12:00 a.M. All right babe, lets go ROCK some parties",
+          "attribute_id": "9e8425a7-5929-443b-9050-919e924d573f",
+          "updated_at": "2022-10-21T12:00:40.464523"
+        }
+      ]
+    },
+    {
+      "name": "Dog wake up time",
+      "device_id": "57d792c9-2a5b-44d5-8873-1964891e3de9",
+      "formatting": {
+        "text": {
+          "transform": "none"
+        }
+      },
+      "updated_at": "2022-07-21T13:46:54.518704",
+      "id": "9e8425a7-5929-443b-9050-919e924d573c",
+      "type": "text",
+      "created_at": "2022-07-21T13:46:54.518704",
+      "readings": []
     }
   ]
 }
