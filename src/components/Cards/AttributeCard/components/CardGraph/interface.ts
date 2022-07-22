@@ -1,5 +1,5 @@
-import { IReading } from "../../../../../interfaces/reading";
+import { IAttribute } from "../../../../../interfaces/attribute";
 
 export interface ICardGraph {
-  readings: IReading[];
+  attribute: IAttribute;
 }

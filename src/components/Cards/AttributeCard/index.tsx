@@ -1,7 +1,7 @@
 import React from "react";
 
 import { IAttributeCardProps } from "./interfaces";
-import { Content } from "./styles";
+import { Container, Content } from "./styles";
 import { NoReadings } from "./components/NoReadings";
 import { CardReadings } from "./components/CardReadings";
 import { SurfaceCard } from "../SurfaceCard";
@@ -26,23 +26,25 @@ export const AttributeCard: React.FC<IAttributeCardProps> = ({
     attribute.metadata.layout === "long" && attribute.type !== "text";
 
   return (
-    <SurfaceCard
-      {...rest}
-      title={attribute.name}
-      options={options}
-      onOptionClick={handleOptionClick}
+    <Container
+      data-layout={attribute.metadata.layout}
+      data-show-graph={showGraph}
     >
-      {attribute.readings.length ? (
-        <Content
-          data-layout={attribute.metadata.layout}
-          data-type={attribute.type}
-        >
-          <CardReadings attribute={attribute} />
-          {showGraph && <CardGraph readings={attribute.readings} />}
-        </Content>
-      ) : (
-        <NoReadings />
-      )}
-    </SurfaceCard>
+      <SurfaceCard
+        {...rest}
+        title={attribute.name}
+        options={options}
+        onOptionClick={handleOptionClick}
+      >
+        {attribute.readings.length ? (
+          <Content data-show-graph={showGraph}>
+            <CardReadings attribute={attribute} />
+            {showGraph && <CardGraph attribute={attribute} />}
+          </Content>
+        ) : (
+          <NoReadings />
+        )}
+      </SurfaceCard>
+    </Container>
   );
 };

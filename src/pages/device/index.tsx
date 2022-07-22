@@ -30,11 +30,7 @@ export const Device: React.FC = () => {
       </NewButton>
       <AttributesContainer>
         {device.attributes.map((attribute) => (
-          <AttributeCard
-            key={attribute.id}
-            attribute={attribute}
-            className={attribute.metadata.layout}
-          />
+          <AttributeCard key={attribute.id} attribute={attribute} />
         ))}
       </AttributesContainer>
     </Container>

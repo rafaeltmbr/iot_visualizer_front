@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Containter = styled.div`
-  height: 7rem;
+  height: var(--attribute-card-content-height);
   overflow: auto;
   white-space: nowrap;
   color: ${(props) => props.theme.colors.onSurface};

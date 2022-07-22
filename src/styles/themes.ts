@@ -30,7 +30,7 @@ const light = {
     onSurfaceHover: "#F1F1F1",
     surfaceBorder: "#E5E5E5",
     onPrimary: "#FFFFFF",
-    graphGrid: "#F0F0F0",
+    graphGrid: "#E7E7E7",
     scrollbarTrack: "rgba(200, 200, 200, 0.25)",
     scrollbarThumb: "#BBBBBB",
     scrollbarThumbHover: "#999999",
