@@ -30,6 +30,9 @@ const light = {
     surfaceBorder: "#E5E5E5",
     onPrimary: "#FFFFFF",
     graphGrid: "#F0F0F0",
+    scrollbarTrack: "rgba(200, 200, 200, 0.25)",
+    scrollbarThumb: "#BBBBBB",
+    scrollbarThumbHover: "#999999",
   },
 };
 
