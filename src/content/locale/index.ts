@@ -12,6 +12,7 @@ export const contentContext = <const>[
   "connectionOption",
   "readOn",
   "noReadings",
+  "newAttribute",
 ];
 export type ContentContext = typeof contentContext[number];
 
@@ -43,5 +44,9 @@ export const localeContent: localeContent = {
   noReadings: {
     en: "Nothing here",
     pt: "Nada por aqui",
+  },
+  newAttribute: {
+    en: "New attribute",
+    pt: "Novo atributo",
   },
 };

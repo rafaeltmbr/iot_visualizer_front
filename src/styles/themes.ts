@@ -17,6 +17,7 @@ const light = {
   breakingsPoints,
   colors: {
     primary: "#0083E2",
+    primaryHover: "#2ca0f5",
     header: "#2C2C2C",
     onHeader: "#CDCDCD",
     onHeaderHighlight: "#EDEDED",

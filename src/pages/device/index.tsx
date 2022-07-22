@@ -8,6 +8,7 @@ import { IDevice } from "../../interfaces/device";
 import { DeviceHeaderCard } from "../../components/Cards/DeviceHeaderCard";
 import { getLocaleContent } from "../../utils/getLocaleContent";
 import { ShortAttributeCard } from "../../components/Cards/ShortAttributeCard";
+import { NewButton } from "../../components/Buttons/NewButton";
 
 export const Device: React.FC = () => {
   const [device, setDevice] = useState<IDevice>(default_device as any);
@@ -26,6 +27,9 @@ export const Device: React.FC = () => {
   return (
     <Container>
       <DeviceHeaderCard device={device} />
+      <NewButton onClick={() => console.log("new device")}>
+        {getLocaleContent("newAttribute")}
+      </NewButton>
       <AttributesContainer>
         {device.attributes.map((attribute) => (
           <ShortAttributeCard key={attribute.id} attribute={attribute} />
