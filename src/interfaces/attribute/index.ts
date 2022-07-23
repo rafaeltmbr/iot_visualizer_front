@@ -1,7 +1,7 @@
-import { IAttributeMetaData } from "./IAttributeMetadata";
 import { IReading } from "../reading";
+import { IAttributeConfig } from "./IAttributeConfig";
 
-export const attributeTypes = <const>["number", "boolean", "text"];
+export const attributeTypes = ["number", "boolean", "text"] as const;
 export type AttributeType = typeof attributeTypes[number];
 
 export interface IAttribute {
@@ -9,7 +9,7 @@ export interface IAttribute {
   device_id: string;
   name: string;
   type: AttributeType;
-  metadata: IAttributeMetaData;
+  config: IAttributeConfig;
   created_at: string;
   updated_at: string;
   readings: IReading[];

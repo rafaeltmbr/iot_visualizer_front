@@ -9,7 +9,7 @@
     {
       "name": "Bath temperature",
       "device_id": "57d792c9-2a5b-44d5-8873-1964891e3de9",
-      "metadata": {
+      "config": {
         "layout": "long",
         "index": 1,
         "formatting": {
@@ -50,7 +50,7 @@
     {
       "name": "Garage door is",
       "device_id": "57d792c9-2a5b-44d5-8873-1964891e3de9",
-      "metadata": {
+      "config": {
         "layout": "short",
         "index": 2,
         "formatting": {
@@ -91,7 +91,7 @@
     {
       "name": "Gate closed at",
       "device_id": "57d792c9-2a5b-44d5-8873-1964891e3de9",
-      "metadata": {
+      "config": {
         "layout": "short",
         "index": 3,
         "formatting": {
@@ -125,7 +125,7 @@
     {
       "name": "That status message you can't loose",
       "device_id": "57d792c9-2a5b-44d5-8873-1964891e3de9",
-      "metadata": {
+      "config": {
         "layout": "long",
         "index": 4,
         "formatting": {
@@ -165,7 +165,7 @@
     {
       "name": "East side windows",
       "device_id": "57d792c9-2a5b-44d5-8873-1964891e3de9",
-      "metadata": {
+      "config": {
         "layout": "long",
         "index": 5,
         "formatting": {

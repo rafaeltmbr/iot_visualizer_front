@@ -23,11 +23,11 @@ export const AttributeCard: React.FC<IAttributeCardProps> = ({
   };
 
   const showGraph =
-    attribute.metadata.layout === "long" && attribute.type !== "text";
+    attribute.config.layout === "long" && attribute.type !== "text";
 
   return (
     <Container
-      data-layout={attribute.metadata.layout}
+      data-layout={attribute.config.layout}
       data-show-graph={showGraph}
     >
       <SurfaceCard

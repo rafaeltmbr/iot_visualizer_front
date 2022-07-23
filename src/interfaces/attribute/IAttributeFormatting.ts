@@ -8,7 +8,7 @@ export interface IBooleanFormatting {
   false_text: string;
 }
 
-export const textTransformations = <const>["none", "lowercase", "uppercase"];
+export const textTransformations = ["none", "lowercase", "uppercase"] as const;
 export type TextTransformation = typeof textTransformations[number];
 
 export interface ITextFormatting {

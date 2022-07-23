@@ -22,7 +22,7 @@ export const CardReadings: React.FC<ICardReadingsProps> = ({ attribute }) => {
       <ReadingValue>
         {formatReading(
           attribute.type,
-          attribute.metadata.formatting,
+          attribute.config.formatting,
           lastReading.value
         )}
       </ReadingValue>
