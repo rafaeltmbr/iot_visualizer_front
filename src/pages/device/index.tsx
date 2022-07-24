@@ -21,8 +21,6 @@ export const Device: React.FC = () => {
       try {
         const data = await getDevice(String(device_id));
 
-        console.log("data", data);
-
         setDevice(data);
       } catch (err) {
         console.error((err as Error).message);
@@ -30,6 +28,21 @@ export const Device: React.FC = () => {
     };
 
     load();
+  }, [device_id]);
+
+  useEffect(() => {
+    const url = `${process.env.REACT_APP_API_WS_URL}/device/${device_id}`;
+    const ws = new WebSocket(url);
+
+    const handler = (e: MessageEvent<string>) => {
+      if (!e.data) return;
+
+      setDevice(JSON.parse(e.data));
+    };
+
+    ws.onmessage = handler;
+
+    return () => ws.close();
   }, [device_id]);
 
   useEffect(() => {

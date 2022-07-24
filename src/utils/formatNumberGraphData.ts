@@ -75,7 +75,7 @@ type FuncType = (
 ) => IGraphTooltipData[];
 
 export const formatNumberGraphData: FuncType = (attribute, intervals = 25) => {
-  const readings = formatReadings(attribute);
+  const readings = formatReadings(attribute).slice(-intervals);
 
   if (readings.length < 2) return [];
 
