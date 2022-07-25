@@ -20,7 +20,9 @@ const formatNumber = (format: IAttributeFormatting, value: string) => {
 const formatBoolean = (format: IAttributeFormatting, value: string) => {
   if (!format.boolean) return value;
 
-  return value ? format.boolean.true_text : format.boolean.false_text;
+  return value === "true"
+    ? format.boolean.true_text
+    : format.boolean.false_text;
 };
 
 const textTransformers: Record<TextTransformation, (text: string) => string> = {
